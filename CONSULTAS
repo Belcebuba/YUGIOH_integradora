@@ -80,8 +80,15 @@ clientes inner join deuda_c on clientes.id_cli=deuda_c.id_clientec inner join ca
 deuda_c.id_c=cartas.id_car inner join car_rar on cartas.id_car=car_rar.id_carar inner join rareza on
 car_rar.id_rar=rareza.id_ra
 
+son mias
+/*informacion de los eventos en un periodo de tiempo*/
+select * from calendario inner join usuarios on calendario.id_usuario=usuarios.id_usr where month(fecha_cal) between '06' and '07';
 
-
+/*prodcutos que ya no tenga existencia*/
+select * from productos where productos.existencias<1;
+/*mostrar la informacion de cartas de determinada rareza*/
+select * from cartas inner join car_rar on cartas.id_car=car_rar.id_carar inner join rareza on car_rar.id_rar=rareza.id_ra
+where rareza.rareza='RARA';
 
 
 
